@@ -1,57 +1,32 @@
-//#include<stdio.h>
-//#include<stdlib.h>
-//#include<string.h>
-//#include<math.h>
-
-//#define BUFSIZE 32
-
-/*
-int main(int argc, char *argv[]) {
-    FILE *input, *output;
-    char buffer[BUFSIZE];
-    int mask = 0xffffffe0;
-
-    input = fopen("output2.txt", "r");
-    if (input == NULL) {
-        fprintf(stderr, "Error: unable to open input file.\n");
-        return 1;
-    }
-    output = fopen("organized.txt", "w");
-    if (output == NULL) {
-        fprintf(stderr, "Error: unable to open output file.\n");
-        fclose(input);
-        return 1;
-    }
-
-    while (fgets(buffer, BUFSIZE, input) != NULL) {
-        int number = atoi(buffer);
-        number &= mask;
-        fprintf(output, "%d\n", number);
-    }
-
-    fclose(input);
-    fclose(output);
-    return 0;
-}
-*/
-
+//Tripp Herlong
+/Feb 2nd 2022
+//binary analysis
 
 #include<stdio.h>
 #include<stdlib.h>
 
-int main(int argc, char *argv[]){
+int main(int argc, char *argv[])
+{
   FILE *fp1, *fp2;
   int i, j, mask;
   char c[33];
-
+  
+    
+  //open files for reading and writing
   fp1 = fopen("output2.txt", "r");
   fp2 = fopen("organized.txt", "w");
 
-  if(fp1 == NULL || fp2 == NULL){
+  if(fp1 == NULL || fp2 == NULL)
+  {
     printf("Error opening file\n");
     return 1;
   }
 
+    
+    
+    
+  //******FIX LATER
+  //Check for repeating bytes and get rid of them
   for(i = 0; i < 10; i++){
     fscanf(fp1, "%s", c);
     for(j = 0; j < 8; j++){
