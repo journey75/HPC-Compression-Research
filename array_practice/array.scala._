@@ -1,0 +1,15 @@
+import chisel3._
+
+class MyModule extends Module 
+{
+  val io = IO(new Bundle 
+  {
+    // put io here later
+  })
+
+  val myArray = RegInit(VecInit(Seq.fill(128)(0.U(32.W))))
+  // Initialize a 128-entry array of 32-bit numbers with all zeroes
+  
+  // Other code can manipulate myArray as needed
+
+}
