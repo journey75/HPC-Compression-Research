@@ -57,7 +57,7 @@ inline void SZ_fast_compress_args_unpredictable_one_block_float(float *oriData, 
                     leadingNum = 1;
 
                 leadNumberArray_int[i] = leadingNum;
-
+                //------------------------------------------------------------------------------------------------
                 if (leadingNum == 0) {
                     exactMidbyteArray[residualMidBytes_size] = lfBuf_cur.byte[2];
                     exactMidbyteArray[residualMidBytes_size + 1] = lfBuf_cur.byte[3];
@@ -86,7 +86,7 @@ inline void SZ_fast_compress_args_unpredictable_one_block_float(float *oriData, 
                     leadingNum = 1;
 
                 leadNumberArray_int[i] = leadingNum;
-
+                //------------------------------------------------------------------------------------------------
                 if (leadingNum == 0) {
                     exactMidbyteArray[residualMidBytes_size] = lfBuf_cur.byte[1];
                     exactMidbyteArray[residualMidBytes_size + 1] = lfBuf_cur.byte[2];
@@ -118,7 +118,7 @@ inline void SZ_fast_compress_args_unpredictable_one_block_float(float *oriData, 
                     leadingNum = 2;
                 else if (lfBuf_pre.ivalue >> 24 == 0)
                     leadingNum = 1;
-
+                //------------------------------------------------------------------------------------------------
                 leadNumberArray_int[i] = leadingNum;
 
                 if (leadingNum == 0) {
