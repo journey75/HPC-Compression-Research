@@ -11,8 +11,6 @@ class SZFastCompressArgsUnpredictableOneBlockFloat extends Module {
     val medianValue = Input(UInt(32.W))
     val radius = Input(UInt(32.W))
   })
-
-  // Your code for SZ_fast_compress_args_unpredictable_one_block_float goes here
 }
 
 //-------------------------------------------------------------------------------
